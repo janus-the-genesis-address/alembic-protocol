@@ -1,0 +1,52 @@
+[package]
+name = "Alembic-local-cluster"
+description = "Blockchain, Rebuilt for Scale"
+documentation = "https://docs.rs/Alembic-local-cluster"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+crossbeam-channel = { workspace = true }
+itertools = { workspace = true }
+log = { workspace = true }
+rand = { workspace = true }
+rayon = { workspace = true }
+Alembic-accounts-db = { workspace = true }
+Alembic-client = { workspace = true }
+Alembic-config-program = { workspace = true }
+Alembic-core = { workspace = true }
+Alembic-entry = { workspace = true }
+Alembic-gossip = { workspace = true }
+Alembic-ledger = { workspace = true }
+Alembic-logger = { workspace = true }
+Alembic-pubsub-client = { workspace = true }
+Alembic-quic-client = { workspace = true }
+Alembic-rpc-client = { workspace = true }
+Alembic-rpc-client-api = { workspace = true }
+Alembic-runtime = { workspace = true }
+Alembic-sdk = { workspace = true }
+Alembic-stake-program = { workspace = true }
+Alembic-streamer = { workspace = true }
+Alembic-thin-client = { workspace = true }
+Alembic-tpu-client = { workspace = true }
+Alembic-turbine = { workspace = true }
+Alembic-vote = { workspace = true }
+Alembic-vote-program = { workspace = true }
+static_assertions = { workspace = true }
+tempfile = { workspace = true }
+trees = { workspace = true }
+
+[dev-dependencies]
+assert_matches = { workspace = true }
+fs_extra = { workspace = true }
+gag = { workspace = true }
+serial_test = { workspace = true }
+Alembic-download-utils = { workspace = true }
+Alembic-ledger = { workspace = true, features = ["dev-context-only-utils"] }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

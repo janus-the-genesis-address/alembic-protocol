@@ -1,0 +1,28 @@
+[package]
+name = "Alembic-sbf-rust-simulation"
+description = "Alembic SBF Program Simulation Differences"
+documentation = "https://docs.rs/Alembic-sbf-rust-simulation"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[features]
+test-bpf = []
+
+[dependencies]
+Alembic-program = { workspace = true }
+
+[dev-dependencies]
+Alembic-logger = { workspace = true }
+Alembic-program-test = { workspace = true }
+Alembic-sdk = { workspace = true }
+Alembic-validator = { workspace = true }
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

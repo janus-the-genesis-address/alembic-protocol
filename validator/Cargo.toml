@@ -1,0 +1,84 @@
+[package]
+name = "Alembic-validator"
+description = "Blockchain, Rebuilt for Scale"
+documentation = "https://docs.rs/Alembic-validator"
+default-run = "Alembic-validator"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+chrono = { workspace = true, features = ["default", "serde"] }
+clap = { workspace = true }
+console = { workspace = true }
+core_affinity = { workspace = true }
+crossbeam-channel = { workspace = true }
+fd-lock = { workspace = true }
+indicatif = { workspace = true }
+itertools = { workspace = true }
+jsonrpc-core = { workspace = true }
+jsonrpc-core-client = { workspace = true, features = ["ipc"] }
+jsonrpc-derive = { workspace = true }
+jsonrpc-ipc-server = { workspace = true }
+lazy_static = { workspace = true }
+libloading = { workspace = true }
+log = { workspace = true }
+num_cpus = { workspace = true }
+rand = { workspace = true }
+rayon = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+serde_yaml = { workspace = true }
+Alembic-accounts-db = { workspace = true }
+Alembic-clap-utils = { workspace = true }
+Alembic-cli-config = { workspace = true }
+Alembic-core = { workspace = true }
+Alembic-download-utils = { workspace = true }
+Alembic-entry = { workspace = true }
+Alembic-faucet = { workspace = true }
+Alembic-genesis-utils = { workspace = true }
+Alembic-geyser-plugin-interface = { workspace = true }
+Alembic-geyser-plugin-manager = { workspace = true }
+Alembic-gossip = { workspace = true }
+Alembic-ledger = { workspace = true }
+Alembic-logger = { workspace = true }
+Alembic-metrics = { workspace = true }
+Alembic-net-utils = { workspace = true }
+Alembic-perf = { workspace = true }
+Alembic-poh = { workspace = true }
+Alembic-program-runtime = { workspace = true }
+Alembic-rayon-threadlimit = { workspace = true }
+Alembic-rpc = { workspace = true }
+Alembic-rpc-client = { workspace = true }
+Alembic-rpc-client-api = { workspace = true }
+Alembic-runtime = { workspace = true }
+Alembic-sdk = { workspace = true }
+Alembic-send-transaction-service = { workspace = true }
+Alembic-storage-bigtable = { workspace = true }
+Alembic-streamer = { workspace = true }
+Alembic-test-validator = { workspace = true }
+Alembic-tpu-client = { workspace = true }
+Alembic-unified-scheduler-pool = { workspace = true }
+Alembic-version = { workspace = true }
+Alembic-vote-program = { workspace = true }
+symlink = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true }
+
+[dev-dependencies]
+Alembic-account-decoder = { workspace = true }
+Alembic-runtime = { workspace = true, features = ["dev-context-only-utils"] }
+spl-token-2022 = { workspace = true, features = ["no-entrypoint"] }
+
+[target.'cfg(not(target_env = "msvc"))'.dependencies]
+jemallocator = { workspace = true }
+
+[target."cfg(unix)".dependencies]
+libc = { workspace = true }
+signal-hook = { workspace = true }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

@@ -1,0 +1,40 @@
+[package]
+name = "Alembic-entry"
+description = "Alembic Entry"
+documentation = "https://docs.rs/Alembic-poh"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+bincode = { workspace = true }
+crossbeam-channel = { workspace = true }
+dlopen2 = { workspace = true }
+lazy_static = { workspace = true }
+log = { workspace = true }
+rand = { workspace = true }
+rayon = { workspace = true }
+serde = { workspace = true }
+Alembic-measure = { workspace = true }
+Alembic-merkle-tree = { workspace = true }
+Alembic-metrics = { workspace = true }
+Alembic-perf = { workspace = true }
+Alembic-rayon-threadlimit = { workspace = true }
+Alembic-sdk = { workspace = true }
+
+[dev-dependencies]
+assert_matches = { workspace = true }
+Alembic-logger = { workspace = true }
+
+[lib]
+crate-type = ["lib"]
+name = "Alembic_entry"
+
+[[bench]]
+name = "entry_sigverify"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

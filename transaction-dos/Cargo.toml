@@ -1,0 +1,37 @@
+[package]
+name = "Alembic-transaction-dos"
+publish = false
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+bincode = { workspace = true }
+clap = { workspace = true }
+log = { workspace = true }
+rand = { workspace = true }
+rayon = { workspace = true }
+Alembic-clap-utils = { workspace = true }
+Alembic-cli = { workspace = true }
+Alembic-client = { workspace = true }
+Alembic-core = { workspace = true }
+Alembic-faucet = { workspace = true }
+Alembic-gossip = { workspace = true }
+Alembic-logger = { workspace = true }
+Alembic-measure = { workspace = true }
+Alembic-net-utils = { workspace = true }
+Alembic-rpc-client = { workspace = true }
+Alembic-runtime = { workspace = true }
+Alembic-sdk = { workspace = true }
+Alembic-streamer = { workspace = true }
+Alembic-transaction-status = { workspace = true }
+Alembic-version = { workspace = true }
+
+[dev-dependencies]
+Alembic-local-cluster = { workspace = true }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

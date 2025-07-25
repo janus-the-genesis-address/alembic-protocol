@@ -1,0 +1,32 @@
+[package]
+name = "Alembic-bloom"
+description = "Alembic bloom filter"
+documentation = "https://docs.rs/Alembic-bloom"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+bv = { workspace = true, features = ["serde"] }
+fnv = { workspace = true }
+log = { workspace = true }
+rand = { workspace = true }
+rayon = { workspace = true }
+serde = { workspace = true, features = ["rc"] }
+serde_derive = { workspace = true }
+Alembic-frozen-abi = { workspace = true }
+Alembic-frozen-abi-macro = { workspace = true }
+Alembic-sdk = { workspace = true }
+
+[lib]
+crate-type = ["lib"]
+name = "Alembic_bloom"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+
+[build-dependencies]
+rustc_version = { workspace = true }

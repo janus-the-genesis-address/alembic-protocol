@@ -1,0 +1,35 @@
+[package]
+name = "Alembic-bucket-map"
+description = "Alembic-bucket-map"
+documentation = "https://docs.rs/Alembic-bucket-map"
+readme = "../README.md"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+bv = { workspace = true, features = ["serde"] }
+bytemuck = { workspace = true, features = ["derive"] }
+log = { workspace = true }
+memmap2 = { workspace = true }
+modular-bitfield = { workspace = true }
+num_enum = { workspace = true }
+rand = { workspace = true }
+Alembic-measure = { workspace = true }
+Alembic-sdk = { workspace = true }
+tempfile = { workspace = true }
+
+[dev-dependencies]
+fs_extra = { workspace = true }
+rayon = { workspace = true }
+Alembic-logger = { workspace = true }
+
+[lib]
+crate-type = ["lib"]
+name = "Alembic_bucket_map"
+
+[[bench]]
+name = "bucket_map"

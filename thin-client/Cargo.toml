@@ -1,0 +1,25 @@
+[package]
+name = "Alembic-thin-client"
+description = "Alembic Thin Client"
+documentation = "https://docs.rs/Alembic-thin-client"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+bincode = { workspace = true }
+log = { workspace = true }
+rayon = { workspace = true }
+Alembic-connection-cache = { workspace = true }
+Alembic-rpc-client = { workspace = true }
+Alembic-rpc-client-api = { workspace = true }
+Alembic-sdk = { workspace = true }
+
+[dev-dependencies]
+Alembic-logger = { workspace = true }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

@@ -1,0 +1,31 @@
+[package]
+name = "Alembic-banks-server"
+description = "Alembic Protocol banks server"
+documentation = "https://docs.rs/Alembic-banks-server"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+bincode = { workspace = true }
+crossbeam-channel = { workspace = true }
+futures = { workspace = true }
+Alembic-banks-interface = { workspace = true }
+Alembic-client = { workspace = true }
+Alembic-runtime = { workspace = true }
+Alembic-sdk = { workspace = true }
+Alembic-send-transaction-service = { workspace = true }
+Alembic-svm = { workspace = true }
+tarpc = { workspace = true, features = ["full"] }
+tokio = { workspace = true, features = ["full"] }
+tokio-serde = { workspace = true, features = ["bincode"] }
+
+[lib]
+crate-type = ["lib"]
+name = "Alembic_banks_server"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

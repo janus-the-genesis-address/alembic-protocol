@@ -1,0 +1,39 @@
+[package]
+name = "Alembic-vote"
+description = "Alembic Protocol vote"
+documentation = "https://docs.rs/Alembic-vote"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+crossbeam-channel = { workspace = true }
+itertools = { workspace = true }
+log = { workspace = true }
+serde = { workspace = true, features = ["rc"] }
+serde_derive = { workspace = true }
+Alembic-frozen-abi = { workspace = true }
+Alembic-frozen-abi-macro = { workspace = true }
+Alembic-sdk = { workspace = true }
+Alembic-vote-program = { workspace = true }
+thiserror = { workspace = true }
+
+[lib]
+crate-type = ["lib"]
+name = "Alembic_vote"
+
+[dev-dependencies]
+bincode = { workspace = true }
+rand = { workspace = true }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+
+[build-dependencies]
+rustc_version = { workspace = true }
+
+[features]
+dev-context-only-utils = []

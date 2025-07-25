@@ -1,0 +1,37 @@
+[package]
+name = "Alembic-bpf-loader-program"
+description = "Alembic BPF loader"
+documentation = "https://docs.rs/Alembic-bpf-loader-program"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+bincode = { workspace = true }
+byteorder = { workspace = true }
+libsecp256k1 = { workspace = true }
+log = { workspace = true }
+scopeguard = { workspace = true }
+Alembic-measure = { workspace = true }
+Alembic-program-runtime = { workspace = true }
+Alembic-sdk = { workspace = true }
+Alembic-zk-token-sdk = { workspace = true }
+Alembic_rbpf = { workspace = true }
+thiserror = { workspace = true }
+
+[dev-dependencies]
+assert_matches = { workspace = true }
+memoffset = { workspace = true }
+rand = { workspace = true }
+Alembic-sdk = { workspace = true, features = ["dev-context-only-utils"] }
+test-case = { workspace = true }
+
+[lib]
+crate-type = ["lib"]
+name = "Alembic_bpf_loader_program"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

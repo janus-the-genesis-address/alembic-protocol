@@ -1,0 +1,31 @@
+[package]
+name = "Alembic-version"
+description = "Alembic Version"
+documentation = "https://docs.rs/Alembic-version"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+log = { workspace = true }
+semver = { workspace = true }
+serde = { workspace = true }
+serde_derive = { workspace = true }
+Alembic-frozen-abi = { workspace = true }
+Alembic-frozen-abi-macro = { workspace = true }
+Alembic-sdk = { workspace = true }
+
+[features]
+dummy-for-ci-check = []
+
+[lib]
+name = "Alembic_version"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+
+[build-dependencies]
+rustc_version = { workspace = true }

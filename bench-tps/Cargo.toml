@@ -1,0 +1,52 @@
+[package]
+name = "Alembic-bench-tps"
+publish = false
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+clap = { workspace = true }
+crossbeam-channel = { workspace = true }
+log = { workspace = true }
+rand = { workspace = true }
+rayon = { workspace = true }
+serde_json = { workspace = true }
+serde_yaml = { workspace = true }
+Alembic-clap-utils = { workspace = true }
+Alembic-cli-config = { workspace = true }
+Alembic-client = { workspace = true }
+Alembic-connection-cache = { workspace = true }
+Alembic-core = { workspace = true }
+Alembic-faucet = { workspace = true }
+Alembic-genesis = { workspace = true }
+Alembic-gossip = { workspace = true }
+Alembic-logger = { workspace = true }
+Alembic-measure = { workspace = true }
+Alembic-metrics = { workspace = true }
+Alembic-net-utils = { workspace = true }
+Alembic-rpc = { workspace = true }
+Alembic-rpc-client = { workspace = true }
+Alembic-rpc-client-api = { workspace = true }
+Alembic-rpc-client-nonce-utils = { workspace = true }
+Alembic-runtime = { workspace = true }
+Alembic-sdk = { workspace = true }
+Alembic-streamer = { workspace = true }
+Alembic-tpu-client = { workspace = true }
+Alembic-transaction-status = { workspace = true }
+Alembic-version = { workspace = true }
+spl-instruction-padding = { workspace = true }
+thiserror = { workspace = true }
+
+[dev-dependencies]
+serial_test = { workspace = true }
+Alembic-local-cluster = { workspace = true }
+Alembic-runtime = { workspace = true, features = ["dev-context-only-utils"] }
+Alembic-test-validator = { workspace = true }
+tempfile = { workspace = true }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

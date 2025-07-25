@@ -1,0 +1,41 @@
+[package]
+name = "Alembic-accounts-cluster-bench"
+publish = false
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+clap = { workspace = true }
+log = { workspace = true }
+rand = { workspace = true }
+rayon = { workspace = true }
+Alembic-account-decoder = { workspace = true }
+Alembic-accounts-db = { workspace = true }
+Alembic-clap-utils = { workspace = true }
+Alembic-cli-config = { workspace = true }
+Alembic-client = { workspace = true }
+Alembic-faucet = { workspace = true }
+Alembic-gossip = { workspace = true }
+Alembic-logger = { workspace = true }
+Alembic-measure = { workspace = true }
+Alembic-net-utils = { workspace = true }
+Alembic-rpc-client = { workspace = true, features = ["default"] }
+Alembic-runtime = { workspace = true }
+Alembic-sdk = { workspace = true }
+Alembic-streamer = { workspace = true }
+Alembic-transaction-status = { workspace = true }
+Alembic-version = { workspace = true }
+spl-token = { workspace = true, features = ["no-entrypoint"] }
+
+[dev-dependencies]
+Alembic-core = { workspace = true }
+Alembic-local-cluster = { workspace = true }
+Alembic-runtime = { workspace = true, features = ["dev-context-only-utils"] }
+Alembic-test-validator = { workspace = true }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

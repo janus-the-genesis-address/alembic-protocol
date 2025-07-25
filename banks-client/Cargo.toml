@@ -1,0 +1,32 @@
+[package]
+name = "Alembic-banks-client"
+description = "Alembic banks client"
+documentation = "https://docs.rs/Alembic-banks-client"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+borsh = { workspace = true }
+futures = { workspace = true }
+Alembic-banks-interface = { workspace = true }
+Alembic-program = { workspace = true }
+Alembic-sdk = { workspace = true }
+tarpc = { workspace = true, features = ["full"] }
+thiserror = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
+tokio-serde = { workspace = true, features = ["bincode"] }
+
+[dev-dependencies]
+Alembic-banks-server = { workspace = true }
+Alembic-runtime = { workspace = true, features = ["dev-context-only-utils"] }
+
+[lib]
+crate-type = ["lib"]
+name = "Alembic_banks_client"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

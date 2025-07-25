@@ -1,0 +1,27 @@
+[package]
+name = "Alembic-unified-scheduler-pool"
+description = "The Alembic unified scheduler pool"
+documentation = "https://docs.rs/Alembic-unified-scheduler-pool"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+assert_matches = { workspace = true }
+crossbeam-channel = { workspace = true }
+derivative = { workspace = true }
+log = { workspace = true }
+Alembic-ledger = { workspace = true }
+Alembic-program-runtime = { workspace = true }
+Alembic-runtime = { workspace = true }
+Alembic-sdk = { workspace = true }
+Alembic-unified-scheduler-logic = { workspace = true }
+Alembic-vote = { workspace = true }
+
+[dev-dependencies]
+assert_matches = { workspace = true }
+Alembic-logger = { workspace = true }
+Alembic-runtime = { workspace = true, features = ["dev-context-only-utils"] }

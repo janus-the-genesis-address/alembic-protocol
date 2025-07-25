@@ -1,0 +1,21 @@
+[package]
+name = "Alembic-compute-budget-program"
+description = "Alembic Compute Budget program"
+documentation = "https://docs.rs/Alembic-compute-budget-program"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+Alembic-program-runtime = { workspace = true }
+Alembic-sdk = { workspace = true }
+
+[lib]
+crate-type = ["lib"]
+name = "Alembic_compute_budget_program"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

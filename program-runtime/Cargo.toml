@@ -1,0 +1,48 @@
+[package]
+name = "Alembic-program-runtime"
+description = "Alembic program runtime"
+documentation = "https://docs.rs/Alembic-program-runtime"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+base64 = { workspace = true }
+bincode = { workspace = true }
+eager = { workspace = true }
+enum-iterator = { workspace = true }
+itertools = { workspace = true }
+libc = { workspace = true }
+log = { workspace = true }
+num-derive = { workspace = true }
+num-traits = { workspace = true }
+percentage = { workspace = true }
+rand = { workspace = true }
+serde = { workspace = true, features = ["derive", "rc"] }
+Alembic-frozen-abi = { workspace = true }
+Alembic-frozen-abi-macro = { workspace = true }
+Alembic-measure = { workspace = true }
+Alembic-metrics = { workspace = true }
+Alembic-sdk = { workspace = true }
+Alembic_rbpf = { workspace = true }
+thiserror = { workspace = true }
+
+[dev-dependencies]
+assert_matches = { workspace = true }
+libsecp256k1 = { workspace = true }
+Alembic-logger = { workspace = true }
+Alembic-sdk = { workspace = true, features = ["dev-context-only-utils"] }
+test-case = { workspace = true }
+
+[lib]
+crate-type = ["lib"]
+name = "Alembic_program_runtime"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+
+[build-dependencies]
+rustc_version = { workspace = true }

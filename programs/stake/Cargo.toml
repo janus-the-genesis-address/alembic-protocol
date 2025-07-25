@@ -1,0 +1,34 @@
+[package]
+name = "Alembic-stake-program"
+description = "Alembic Stake program"
+documentation = "https://docs.rs/Alembic-stake-program"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+bincode = { workspace = true }
+log = { workspace = true }
+Alembic-config-program = { workspace = true }
+Alembic-program-runtime = { workspace = true }
+Alembic-sdk = { workspace = true }
+Alembic-vote-program = { workspace = true }
+
+[dev-dependencies]
+assert_matches = { workspace = true }
+proptest = { workspace = true }
+Alembic-logger = { workspace = true }
+test-case = { workspace = true }
+
+[build-dependencies]
+rustc_version = { workspace = true }
+
+[lib]
+crate-type = ["lib"]
+name = "Alembic_stake_program"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

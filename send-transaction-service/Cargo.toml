@@ -1,0 +1,27 @@
+[package]
+name = "Alembic-send-transaction-service"
+description = "Alembic send transaction service"
+documentation = "https://docs.rs/Alembic-send-transaction-service"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+crossbeam-channel = { workspace = true }
+log = { workspace = true }
+Alembic-client = { workspace = true }
+Alembic-measure = { workspace = true }
+Alembic-metrics = { workspace = true }
+Alembic-runtime = { workspace = true }
+Alembic-sdk = { workspace = true }
+Alembic-tpu-client = { workspace = true }
+
+[dev-dependencies]
+Alembic-logger = { workspace = true }
+Alembic-runtime = { workspace = true, features = ["dev-context-only-utils"] }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

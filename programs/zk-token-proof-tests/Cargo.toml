@@ -1,0 +1,16 @@
+[package]
+name = "Alembic-zk-token-proof-program-tests"
+publish = false
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dev-dependencies]
+bytemuck = { workspace = true, features = ["derive"] }
+curve25519-dalek = { workspace = true }
+Alembic-program-runtime = { workspace = true }
+Alembic-program-test = { workspace = true }
+Alembic-sdk = { workspace = true }
+Alembic-zk-token-sdk = { workspace = true }

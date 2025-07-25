@@ -1,0 +1,25 @@
+[package]
+name = "Alembic-accounts-bench"
+publish = false
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+clap = { workspace = true }
+log = { workspace = true }
+rayon = { workspace = true }
+Alembic-accounts-db = { workspace = true, features = ["dev-context-only-utils"] }
+Alembic-logger = { workspace = true }
+Alembic-measure = { workspace = true }
+Alembic-sdk = { workspace = true }
+Alembic-version = { workspace = true }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+
+[features]
+dev-context-only-utils = []

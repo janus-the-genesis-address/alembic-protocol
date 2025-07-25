@@ -1,0 +1,121 @@
+[package]
+name = "Alembic-core"
+description = "Blockchain, Rebuilt for Scale"
+documentation = "https://docs.rs/Alembic-core"
+readme = "../README.md"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[badges]
+codecov = { repository = "Alembic-labs/Alembic", branch = "master", service = "github" }
+
+[dependencies]
+base64 = { workspace = true }
+bincode = { workspace = true }
+bs58 = { workspace = true }
+bytes = { workspace = true }
+chrono = { workspace = true, features = ["default", "serde"] }
+crossbeam-channel = { workspace = true }
+dashmap = { workspace = true, features = ["rayon", "raw-api"] }
+eager = { workspace = true }
+etcd-client = { workspace = true, features = ["tls"] }
+futures = { workspace = true }
+histogram = { workspace = true }
+itertools = { workspace = true }
+lazy_static = { workspace = true }
+log = { workspace = true }
+lru = { workspace = true }
+min-max-heap = { workspace = true }
+num_enum = { workspace = true }
+prio-graph = { workspace = true }
+quinn = { workspace = true }
+rand = { workspace = true }
+rand_chacha = { workspace = true }
+rayon = { workspace = true }
+rolling-file = { workspace = true }
+rustls = { workspace = true }
+serde = { workspace = true }
+serde_bytes = { workspace = true }
+serde_derive = { workspace = true }
+Alembic-accounts-db = { workspace = true }
+Alembic-bloom = { workspace = true }
+Alembic-client = { workspace = true }
+Alembic-cost-model = { workspace = true }
+Alembic-entry = { workspace = true }
+Alembic-frozen-abi = { workspace = true }
+Alembic-frozen-abi-macro = { workspace = true }
+Alembic-geyser-plugin-manager = { workspace = true }
+Alembic-gossip = { workspace = true }
+Alembic-ledger = { workspace = true }
+Alembic-measure = { workspace = true }
+Alembic-metrics = { workspace = true }
+Alembic-net-utils = { workspace = true }
+Alembic-perf = { workspace = true }
+Alembic-poh = { workspace = true }
+Alembic-program-runtime = { workspace = true }
+Alembic-quic-client = { workspace = true }
+Alembic-rayon-threadlimit = { workspace = true }
+Alembic-rpc = { workspace = true }
+Alembic-rpc-client-api = { workspace = true }
+Alembic-runtime = { workspace = true }
+Alembic-sdk = { workspace = true }
+Alembic-send-transaction-service = { workspace = true }
+Alembic-streamer = { workspace = true }
+Alembic-svm = { workspace = true }
+Alembic-tpu-client = { workspace = true }
+Alembic-transaction-status = { workspace = true }
+Alembic-turbine = { workspace = true }
+Alembic-unified-scheduler-pool = { workspace = true }
+Alembic-version = { workspace = true }
+Alembic-vote = { workspace = true }
+Alembic-vote-program = { workspace = true }
+Alembic-wen-restart = { workspace = true }
+strum = { workspace = true, features = ["derive"] }
+strum_macros = { workspace = true }
+sys-info = { workspace = true }
+tempfile = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
+trees = { workspace = true }
+
+[dev-dependencies]
+assert_matches = { workspace = true }
+fs_extra = { workspace = true }
+serde_json = { workspace = true }
+serial_test = { workspace = true }
+# See order-crates-for-publishing.py for using this unusual `path = "."`
+Alembic-core = { path = ".", features = ["dev-context-only-utils"] }
+Alembic-logger = { workspace = true }
+Alembic-poh = { workspace = true, features = ["dev-context-only-utils"] }
+Alembic-program-runtime = { workspace = true }
+Alembic-runtime = { workspace = true, features = ["dev-context-only-utils"] }
+Alembic-sdk = { workspace = true, features = ["dev-context-only-utils"] }
+Alembic-stake-program = { workspace = true }
+static_assertions = { workspace = true }
+systemstat = { workspace = true }
+test-case = { workspace = true }
+
+[target."cfg(unix)".dependencies]
+sysctl = { workspace = true }
+
+[build-dependencies]
+rustc_version = { workspace = true }
+
+[features]
+dev-context-only-utils = []
+
+[[bench]]
+name = "banking_stage"
+
+[[bench]]
+name = "gen_keys"
+
+[[bench]]
+name = "sigverify_stage"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

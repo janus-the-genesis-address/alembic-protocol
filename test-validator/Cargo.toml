@@ -1,0 +1,39 @@
+[package]
+name = "Alembic-test-validator"
+description = "Blockchain, Rebuilt for Scale"
+readme = "../README.md"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+base64 = { workspace = true }
+bincode = { workspace = true }
+crossbeam-channel = { workspace = true }
+log = { workspace = true }
+serde_derive = { workspace = true }
+serde_json = { workspace = true }
+Alembic-accounts-db = { workspace = true }
+Alembic-cli-output = { workspace = true }
+Alembic-client = { workspace = true }
+Alembic-core = { workspace = true }
+Alembic-geyser-plugin-manager = { workspace = true }
+Alembic-gossip = { workspace = true }
+Alembic-ledger = { workspace = true }
+Alembic-logger = { workspace = true }
+Alembic-net-utils = { workspace = true }
+Alembic-program-runtime = { workspace = true }
+Alembic-program-test = { workspace = true }
+Alembic-rpc = { workspace = true }
+Alembic-rpc-client = { workspace = true }
+Alembic-runtime = { workspace = true }
+Alembic-sdk = { workspace = true }
+Alembic-streamer = { workspace = true }
+Alembic-tpu-client = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

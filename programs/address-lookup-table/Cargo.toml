@@ -1,0 +1,36 @@
+[package]
+name = "Alembic-address-lookup-table-program"
+description = "Alembic address lookup table program"
+documentation = "https://docs.rs/Alembic-address-loookup-table-program"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+bincode = { workspace = true }
+bytemuck = { workspace = true }
+log = { workspace = true }
+num-derive = { workspace = true }
+num-traits = { workspace = true }
+serde = { workspace = true, features = ["derive"] }
+Alembic-frozen-abi = { workspace = true }
+Alembic-frozen-abi-macro = { workspace = true }
+Alembic-program = { workspace = true }
+thiserror = { workspace = true }
+
+[target.'cfg(not(target_os = "Alembic"))'.dependencies]
+Alembic-program-runtime = { workspace = true }
+Alembic-sdk = { workspace = true }
+
+[build-dependencies]
+rustc_version = { workspace = true }
+
+[lib]
+crate-type = ["lib"]
+name = "Alembic_address_lookup_table_program"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

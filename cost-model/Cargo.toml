@@ -1,0 +1,43 @@
+[package]
+name = "Alembic-cost-model"
+description = "Alembic Protocol cost model"
+documentation = "https://docs.rs/Alembic-cost-model"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+lazy_static = { workspace = true }
+log = { workspace = true }
+Alembic-address-lookup-table-program = { workspace = true }
+Alembic-bpf-loader-program = { workspace = true }
+Alembic-compute-budget-program = { workspace = true }
+Alembic-config-program = { workspace = true }
+Alembic-frozen-abi = { workspace = true }
+Alembic-frozen-abi-macro = { workspace = true }
+Alembic-loader-v4-program = { workspace = true }
+Alembic-metrics = { workspace = true }
+Alembic-program-runtime = { workspace = true }
+Alembic-sdk = { workspace = true }
+Alembic-stake-program = { workspace = true }
+Alembic-system-program = { workspace = true }
+Alembic-vote-program = { workspace = true }
+
+[lib]
+crate-type = ["lib"]
+name = "Alembic_cost_model"
+
+[dev-dependencies]
+Alembic-logger = { workspace = true }
+Alembic-sdk = { workspace = true, features = ["dev-context-only-utils"] }
+static_assertions = { workspace = true }
+test-case = { workspace = true }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+
+[build-dependencies]
+rustc_version = { workspace = true }

@@ -1,0 +1,44 @@
+[package]
+name = "Alembic-poh"
+description = "Alembic PoH"
+documentation = "https://docs.rs/Alembic-poh"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+core_affinity = { workspace = true }
+crossbeam-channel = { workspace = true }
+log = { workspace = true }
+Alembic-entry = { workspace = true }
+Alembic-ledger = { workspace = true }
+Alembic-measure = { workspace = true }
+Alembic-metrics = { workspace = true }
+Alembic-runtime = { workspace = true }
+Alembic-sdk = { workspace = true }
+thiserror = { workspace = true }
+
+[dev-dependencies]
+assert_matches = { workspace = true }
+bincode = { workspace = true }
+rand = { workspace = true }
+Alembic-logger = { workspace = true }
+Alembic-perf = { workspace = true }
+Alembic-poh = { path = ".", features = ["dev-context-only-utils"] }
+Alembic-runtime = { workspace = true, features = ["dev-context-only-utils"] }
+
+[features]
+dev-context-only-utils = []
+
+[lib]
+crate-type = ["lib"]
+name = "Alembic_poh"
+
+[[bench]]
+name = "poh"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

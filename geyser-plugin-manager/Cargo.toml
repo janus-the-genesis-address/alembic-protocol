@@ -1,0 +1,34 @@
+[package]
+name = "Alembic-geyser-plugin-manager"
+description = "The Alembic Geyser plugin manager."
+documentation = "https://docs.rs/Alembic-geyser-plugin-manager"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+bs58 = { workspace = true }
+crossbeam-channel = { workspace = true }
+json5 = { workspace = true }
+jsonrpc-core = { workspace = true }
+libloading = { workspace = true }
+log = { workspace = true }
+serde_json = { workspace = true }
+Alembic-accounts-db = { workspace = true }
+Alembic-entry = { workspace = true }
+Alembic-geyser-plugin-interface = { workspace = true }
+Alembic-ledger = { workspace = true }
+Alembic-measure = { workspace = true }
+Alembic-metrics = { workspace = true }
+Alembic-rpc = { workspace = true }
+Alembic-runtime = { workspace = true }
+Alembic-sdk = { workspace = true }
+Alembic-transaction-status = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
