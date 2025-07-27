@@ -1,0 +1,77 @@
+[package]
+name = "Alembic-rpc"
+description = "Alembic RPC"
+documentation = "https://docs.rs/Alembic-rpc"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+base64 = { workspace = true }
+bincode = { workspace = true }
+bs58 = { workspace = true }
+crossbeam-channel = { workspace = true }
+dashmap = { workspace = true }
+itertools = { workspace = true }
+jsonrpc-core = { workspace = true }
+jsonrpc-core-client = { workspace = true }
+jsonrpc-derive = { workspace = true }
+jsonrpc-http-server = { workspace = true }
+jsonrpc-pubsub = { workspace = true }
+libc = { workspace = true }
+log = { workspace = true }
+rayon = { workspace = true }
+regex = { workspace = true }
+serde = { workspace = true }
+serde_derive = { workspace = true }
+serde_json = { workspace = true }
+soketto = { workspace = true }
+Alembic-account-decoder = { workspace = true }
+Alembic-accounts-db = { workspace = true }
+Alembic-client = { workspace = true }
+Alembic-entry = { workspace = true }
+Alembic-faucet = { workspace = true }
+Alembic-gossip = { workspace = true }
+Alembic-ledger = { workspace = true }
+Alembic-measure = { workspace = true }
+Alembic-metrics = { workspace = true }
+Alembic-perf = { workspace = true }
+Alembic-poh = { workspace = true }
+Alembic-rayon-threadlimit = { workspace = true }
+Alembic-rpc-client-api = { workspace = true }
+Alembic-runtime = { workspace = true }
+Alembic-sdk = { workspace = true }
+Alembic-send-transaction-service = { workspace = true }
+Alembic-stake-program = { workspace = true }
+Alembic-storage-bigtable = { workspace = true }
+Alembic-streamer = { workspace = true }
+Alembic-svm = { workspace = true }
+Alembic-tpu-client = { workspace = true }
+Alembic-transaction-status = { workspace = true }
+Alembic-version = { workspace = true }
+Alembic-vote = { workspace = true }
+Alembic-vote-program = { workspace = true }
+spl-token = { workspace = true, features = ["no-entrypoint"] }
+spl-token-2022 = { workspace = true, features = ["no-entrypoint"] }
+stream-cancel = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
+tokio-util = { workspace = true, features = ["codec", "compat"] }
+
+[dev-dependencies]
+serial_test = { workspace = true }
+Alembic-net-utils = { workspace = true }
+Alembic-runtime = { workspace = true, features = ["dev-context-only-utils"] }
+Alembic-stake-program = { workspace = true }
+spl-pod = { workspace = true }
+symlink = { workspace = true }
+
+[lib]
+crate-type = ["lib"]
+name = "Alembic_rpc"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

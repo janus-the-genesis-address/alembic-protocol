@@ -1,0 +1,37 @@
+[package]
+description = "Alembic Program Test Framework"
+name = "Alembic-program-test"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+assert_matches = { workspace = true }
+async-trait = { workspace = true }
+base64 = { workspace = true }
+bincode = { workspace = true }
+chrono-humanize = { workspace = true }
+crossbeam-channel = { workspace = true }
+log = { workspace = true }
+serde = { workspace = true }
+Alembic-accounts-db = { workspace = true }
+Alembic-banks-client = { workspace = true }
+Alembic-banks-interface = { workspace = true }
+Alembic-banks-server = { workspace = true }
+Alembic-bpf-loader-program = { workspace = true }
+Alembic-logger = { workspace = true }
+Alembic-program-runtime = { workspace = true }
+Alembic-runtime = { workspace = true }
+Alembic-sdk = { workspace = true }
+Alembic-svm = { workspace = true }
+Alembic-vote-program = { workspace = true }
+Alembic_rbpf = { workspace = true }
+test-case = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
+
+[dev-dependencies]
+Alembic-stake-program = { workspace = true }

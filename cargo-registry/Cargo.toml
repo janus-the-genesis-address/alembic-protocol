@@ -1,0 +1,45 @@
+[package]
+name = "Alembic-cargo-registry"
+description = "Alembic cargo registry"
+documentation = "https://docs.rs/Alembic-cargo-registry"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+clap = { workspace = true }
+flate2 = { workspace = true }
+hex = { workspace = true }
+hyper = { workspace = true, features = ["full"] }
+log = { workspace = true }
+serde = { workspace = true, features = ["derive"] }
+serde_json = { workspace = true }
+sha2 = { workspace = true }
+Alembic-clap-utils = { workspace = true }
+Alembic-cli = { workspace = true }
+Alembic-cli-config = { workspace = true }
+Alembic-cli-output = { workspace = true }
+Alembic-logger = { workspace = true }
+Alembic-remote-wallet = { workspace = true, features = ["default"] }
+Alembic-rpc-client = { workspace = true, features = ["default"] }
+Alembic-rpc-client-api = { workspace = true }
+Alembic-sdk = { workspace = true }
+Alembic-version = { workspace = true }
+tar = { workspace = true }
+tempfile = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
+toml = { workspace = true }
+
+[dev-dependencies]
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+
+[build-dependencies]
+rustc_version = { workspace = true }
+
+[features]
+dev-context-only-utils = []

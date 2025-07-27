@@ -1,0 +1,13 @@
+[package]
+name = "Alembic-unified-scheduler-logic"
+description = "The Alembic unified scheduler logic"
+documentation = "https://docs.rs/Alembic-unified-scheduler-logic"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+Alembic-sdk = { workspace = true }

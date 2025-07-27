@@ -1,0 +1,29 @@
+[package]
+name = "Alembic-sbf-rust-mem"
+documentation = "https://docs.rs/Alembic-sbf-rust-mem"
+version = { workspace = true }
+description = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[features]
+no-entrypoint = []
+test-bpf = []
+dummy-for-ci-check = ["test-bpf"]
+
+[dependencies]
+Alembic-program = { workspace = true }
+
+[dev-dependencies]
+Alembic-program-runtime = { workspace = true }
+Alembic-program-test = { workspace = true }
+Alembic-sdk = { workspace = true }
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

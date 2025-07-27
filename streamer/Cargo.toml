@@ -1,0 +1,45 @@
+[package]
+name = "Alembic-streamer"
+description = "Alembic Streamer"
+documentation = "https://docs.rs/Alembic-streamer"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+async-channel = { workspace = true }
+bytes = { workspace = true }
+crossbeam-channel = { workspace = true }
+futures-util = { workspace = true }
+histogram = { workspace = true }
+indexmap = { workspace = true }
+itertools = { workspace = true }
+libc = { workspace = true }
+log = { workspace = true }
+nix = { workspace = true }
+pem = { workspace = true }
+percentage = { workspace = true }
+quinn = { workspace = true }
+quinn-proto = { workspace = true }
+rand = { workspace = true }
+rustls = { workspace = true, features = ["dangerous_configuration"] }
+Alembic-metrics = { workspace = true }
+Alembic-perf = { workspace = true }
+Alembic-sdk = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
+x509-parser = { workspace = true }
+
+[dev-dependencies]
+assert_matches = { workspace = true }
+Alembic-logger = { workspace = true }
+
+[lib]
+crate-type = ["lib"]
+name = "Alembic_streamer"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

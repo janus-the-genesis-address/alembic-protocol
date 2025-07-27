@@ -1,0 +1,49 @@
+[package]
+name = "Alembic-wen-restart"
+description = "Automatic repair and restart protocol"
+documentation = "https://github.com/Alembic-foundation/Alembic-improvement-documents/pull/46"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+publish = true
+
+[dependencies]
+anyhow = { workspace = true }
+log = { workspace = true }
+prost = { workspace = true }
+prost-types = { workspace = true }
+Alembic-gossip = { workspace = true }
+Alembic-ledger = { workspace = true }
+Alembic-logger = { workspace = true }
+Alembic-program = { workspace = true }
+Alembic-runtime = { workspace = true }
+Alembic-sdk = { workspace = true }
+Alembic-vote-program = { workspace = true }
+
+[dev-dependencies]
+assert_matches = { workspace = true }
+rand = { workspace = true }
+serial_test = { workspace = true }
+Alembic-accounts-db = { workspace = true }
+Alembic-entry = { workspace = true }
+Alembic-runtime = { workspace = true, features = ["dev-context-only-utils"] }
+Alembic-streamer = { workspace = true }
+tempfile = { workspace = true }
+
+[build-dependencies]
+prost-build = { workspace = true }
+rustc_version = { workspace = true }
+
+# windows users should install the protobuf compiler manually and set the PROTOC
+# envar to point to the installed binary
+[target."cfg(not(windows))".build-dependencies]
+protobuf-src = { workspace = true }
+
+[lib]
+name = "Alembic_wen_restart"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

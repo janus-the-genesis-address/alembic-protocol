@@ -1,0 +1,44 @@
+[package]
+name = "Alembic-genesis"
+description = "Blockchain, Rebuilt for Scale"
+documentation = "https://docs.rs/Alembic-genesis"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+base64 = { workspace = true }
+bincode = { workspace = true }
+clap = { workspace = true }
+itertools = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+serde_yaml = { workspace = true }
+Alembic-accounts-db = { workspace = true }
+Alembic-clap-utils = { workspace = true }
+Alembic-cli-config = { workspace = true }
+Alembic-entry = { workspace = true }
+Alembic-ledger = { workspace = true }
+Alembic-logger = { workspace = true }
+Alembic-runtime = { workspace = true }
+Alembic-sdk = { workspace = true }
+Alembic-stake-program = { workspace = true }
+Alembic-version = { workspace = true }
+Alembic-vote-program = { workspace = true }
+tempfile = { workspace = true }
+
+[dev-dependencies]
+Alembic-runtime = { workspace = true, features = ["dev-context-only-utils"] }
+
+[[bin]]
+name = "Alembic-genesis"
+path = "src/main.rs"
+
+[lib]
+name = "Alembic_genesis"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

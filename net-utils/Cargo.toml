@@ -1,0 +1,40 @@
+[package]
+name = "Alembic-net-utils"
+description = "Alembic Network Utilities"
+documentation = "https://docs.rs/Alembic-net-utils"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+bincode = { workspace = true }
+clap = { version = "3.1.5", features = ["cargo"] }
+crossbeam-channel = { workspace = true }
+log = { workspace = true }
+nix = { workspace = true }
+rand = { workspace = true }
+serde = { workspace = true }
+serde_derive = { workspace = true }
+socket2 = { workspace = true }
+Alembic-logger = { workspace = true }
+Alembic-sdk = { workspace = true }
+Alembic-version = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
+url = { workspace = true }
+
+[lib]
+name = "Alembic_net_utils"
+
+[[bin]]
+name = "Alembic-ip-address"
+path = "src/bin/ip_address.rs"
+
+[[bin]]
+name = "Alembic-ip-address-server"
+path = "src/bin/ip_address_server.rs"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

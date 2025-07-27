@@ -1,0 +1,28 @@
+[package]
+name = "Alembic-rpc-client-nonce-utils"
+description = "Alembic RPC Client Nonce Utilities"
+documentation = "https://docs.rs/Alembic-nonce-client"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+clap = "2.33.0"
+Alembic-clap-utils = { workspace = true }
+Alembic-rpc-client = { workspace = true }
+Alembic-sdk = { workspace = true }
+thiserror = { workspace = true }
+
+[dev-dependencies]
+anyhow = { workspace = true }
+futures = { workspace = true }
+serde_json = { workspace = true }
+Alembic-account-decoder = { workspace = true }
+Alembic-rpc-client-api = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

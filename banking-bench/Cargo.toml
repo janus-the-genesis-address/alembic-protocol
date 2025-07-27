@@ -1,0 +1,35 @@
+[package]
+name = "Alembic-banking-bench"
+publish = false
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+clap = { version = "3.1.8", features = ["derive"] }
+crossbeam-channel = { workspace = true }
+log = { workspace = true }
+rand = { workspace = true }
+rayon = { workspace = true }
+Alembic-client = { workspace = true }
+Alembic-core = { workspace = true }
+Alembic-gossip = { workspace = true }
+Alembic-ledger = { workspace = true }
+Alembic-logger = { workspace = true }
+Alembic-measure = { workspace = true }
+Alembic-perf = { workspace = true }
+Alembic-poh = { workspace = true, features = ["dev-context-only-utils"] }
+Alembic-runtime = { workspace = true, features = ["dev-context-only-utils"] }
+Alembic-sdk = { workspace = true }
+Alembic-streamer = { workspace = true }
+Alembic-tpu-client = { workspace = true }
+Alembic-version = { workspace = true }
+
+[features]
+dev-context-only-utils = []
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

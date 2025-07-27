@@ -1,0 +1,110 @@
+[package]
+name = "Alembic-runtime"
+description = "Alembic runtime"
+documentation = "https://docs.rs/Alembic-runtime"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+aquamarine = { workspace = true }
+arrayref = { workspace = true }
+base64 = { workspace = true }
+bincode = { workspace = true }
+blake3 = { workspace = true }
+bv = { workspace = true, features = ["serde"] }
+bytemuck = { workspace = true }
+byteorder = { workspace = true }
+bzip2 = { workspace = true }
+crossbeam-channel = { workspace = true }
+dashmap = { workspace = true, features = ["rayon", "raw-api"] }
+dir-diff = { workspace = true }
+flate2 = { workspace = true }
+fnv = { workspace = true }
+im = { workspace = true, features = ["rayon", "serde"] }
+index_list = { workspace = true }
+itertools = { workspace = true }
+lazy_static = { workspace = true }
+log = { workspace = true }
+lru = { workspace = true }
+lz4 = { workspace = true }
+memmap2 = { workspace = true }
+mockall = { workspace = true }
+modular-bitfield = { workspace = true }
+num-derive = { workspace = true }
+num-traits = { workspace = true }
+num_cpus = { workspace = true }
+num_enum = { workspace = true }
+percentage = { workspace = true }
+qualifier_attr = { workspace = true }
+rand = { workspace = true }
+rayon = { workspace = true }
+regex = { workspace = true }
+serde = { workspace = true, features = ["rc"] }
+serde_derive = { workspace = true }
+serde_json = { workspace = true }
+Alembic-accounts-db = { workspace = true }
+Alembic-address-lookup-table-program = { workspace = true }
+Alembic-bpf-loader-program = { workspace = true }
+Alembic-bucket-map = { workspace = true }
+Alembic-compute-budget-program = { workspace = true }
+Alembic-config-program = { workspace = true }
+Alembic-cost-model = { workspace = true }
+Alembic-frozen-abi = { workspace = true }
+Alembic-frozen-abi-macro = { workspace = true }
+Alembic-loader-v4-program = { workspace = true }
+Alembic-measure = { workspace = true }
+Alembic-metrics = { workspace = true }
+Alembic-perf = { workspace = true }
+Alembic-program-runtime = { workspace = true }
+Alembic-rayon-threadlimit = { workspace = true }
+Alembic-sdk = { workspace = true }
+Alembic-stake-program = { workspace = true }
+Alembic-svm = { workspace = true }
+Alembic-system-program = { workspace = true }
+Alembic-version = { workspace = true }
+Alembic-vote = { workspace = true }
+Alembic-vote-program = { workspace = true }
+Alembic-zk-token-proof-program = { workspace = true }
+Alembic-zk-token-sdk = { workspace = true }
+static_assertions = { workspace = true }
+strum = { workspace = true, features = ["derive"] }
+strum_macros = { workspace = true }
+symlink = { workspace = true }
+tar = { workspace = true }
+tempfile = { workspace = true }
+thiserror = { workspace = true }
+zstd = { workspace = true }
+
+[lib]
+crate-type = ["lib"]
+name = "Alembic_runtime"
+
+[dev-dependencies]
+assert_matches = { workspace = true }
+ed25519-dalek = { workspace = true }
+libsecp256k1 = { workspace = true }
+memoffset = { workspace = true }
+rand_chacha = { workspace = true }
+Alembic-accounts-db = { workspace = true, features = ["dev-context-only-utils"] }
+Alembic-logger = { workspace = true }
+# See order-crates-for-publishing.py for using this unusual `path = "."`
+Alembic-runtime = { path = ".", features = ["dev-context-only-utils"] }
+Alembic-sdk = { workspace = true, features = ["dev-context-only-utils"] }
+static_assertions = { workspace = true }
+test-case = { workspace = true }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+
+[build-dependencies]
+rustc_version = { workspace = true }
+
+[features]
+dev-context-only-utils = []
+
+[[bench]]
+name = "prioritization_fee_cache"

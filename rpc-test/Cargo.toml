@@ -1,0 +1,39 @@
+[package]
+name = "Alembic-rpc-test"
+description = "Alembic Protocol RPC Test"
+documentation = "https://docs.rs/Alembic-rpc-test"
+publish = false
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+bincode = { workspace = true }
+bs58 = { workspace = true }
+crossbeam-channel = { workspace = true }
+futures-util = { workspace = true }
+log = { workspace = true }
+reqwest = { workspace = true, features = ["blocking", "brotli", "deflate", "gzip", "rustls-tls", "json"] }
+serde = { workspace = true }
+serde_json = { workspace = true }
+Alembic-account-decoder = { workspace = true }
+Alembic-client = { workspace = true }
+Alembic-pubsub-client = { workspace = true }
+Alembic-rpc = { workspace = true }
+Alembic-rpc-client = { workspace = true }
+Alembic-rpc-client-api = { workspace = true }
+Alembic-sdk = { workspace = true }
+Alembic-streamer = { workspace = true }
+Alembic-test-validator = { workspace = true }
+Alembic-tpu-client = { workspace = true }
+Alembic-transaction-status = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
+
+[dev-dependencies]
+Alembic-logger = { workspace = true }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

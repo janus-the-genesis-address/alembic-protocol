@@ -1,0 +1,28 @@
+[package]
+name = "Alembic-watchtower"
+description = "Blockchain, Rebuilt for Scale"
+documentation = "https://docs.rs/Alembic-watchtower"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+clap = { workspace = true }
+humantime = { workspace = true }
+log = { workspace = true }
+Alembic-clap-utils = { workspace = true }
+Alembic-cli-config = { workspace = true }
+Alembic-cli-output = { workspace = true }
+Alembic-logger = { workspace = true }
+Alembic-metrics = { workspace = true }
+Alembic-notifier = { workspace = true }
+Alembic-rpc-client = { workspace = true }
+Alembic-rpc-client-api = { workspace = true }
+Alembic-sdk = { workspace = true }
+Alembic-version = { workspace = true }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

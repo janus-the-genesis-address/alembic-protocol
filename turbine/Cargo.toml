@@ -1,0 +1,55 @@
+[package]
+name = "Alembic-turbine"
+description = "Blockchain, Rebuilt for Scale"
+documentation = "https://docs.rs/Alembic-turbine"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+bincode = { workspace = true }
+bytes = { workspace = true }
+crossbeam-channel = { workspace = true }
+futures = { workspace = true }
+itertools = { workspace = true }
+log = { workspace = true }
+lru = { workspace = true }
+quinn = { workspace = true }
+rand = { workspace = true }
+rand_chacha = { workspace = true }
+rayon = { workspace = true }
+rustls = { workspace = true }
+Alembic-entry = { workspace = true }
+Alembic-gossip = { workspace = true }
+Alembic-ledger = { workspace = true }
+Alembic-measure = { workspace = true }
+Alembic-metrics = { workspace = true }
+Alembic-perf = { workspace = true }
+Alembic-poh = { workspace = true }
+Alembic-quic-client = { workspace = true }
+Alembic-rayon-threadlimit = { workspace = true }
+Alembic-rpc = { workspace = true }
+Alembic-rpc-client-api = { workspace = true }
+Alembic-runtime = { workspace = true }
+Alembic-sdk = { workspace = true }
+Alembic-streamer = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true }
+
+[dev-dependencies]
+assert_matches = { workspace = true }
+Alembic-logger = { workspace = true }
+Alembic-runtime = { workspace = true, features = ["dev-context-only-utils"] }
+test-case = { workspace = true }
+
+[[bench]]
+name = "cluster_info"
+
+[[bench]]
+name = "cluster_nodes"
+
+[[bench]]
+name = "retransmit_stage"

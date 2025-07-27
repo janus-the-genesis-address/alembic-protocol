@@ -1,0 +1,24 @@
+[package]
+name = "Alembic-genesis-utils"
+description = "Alembic Genesis Utils"
+documentation = "https://docs.rs/Alembic-download-utils"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+log = { workspace = true }
+Alembic-accounts-db = { workspace = true }
+Alembic-download-utils = { workspace = true }
+Alembic-rpc-client = { workspace = true }
+Alembic-sdk = { workspace = true }
+
+[lib]
+crate-type = ["lib"]
+name = "Alembic_genesis_utils"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

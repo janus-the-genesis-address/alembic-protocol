@@ -1,0 +1,62 @@
+---
+title: Alembic CLI Reference and Usage
+pagination_label: Alembic CLI Reference and Usage
+sidebar_label: Reference & Usage
+sidebar_position: 3
+---
+
+The [Alembic-cli crate](https://crates.io/crates/Alembic-cli) provides a command-line interface tool for Alembic
+
+## Examples
+
+### Get Pubkey
+
+```bash
+// Command
+$ Alembic-keygen pubkey
+
+// Return
+<PUBKEY>
+```
+
+### Airdrop TACHYON/Lamports
+
+```bash
+// Command
+$ Alembic airdrop 1
+
+// Return
+"1 TACHYON"
+```
+
+### Get Balance
+
+```bash
+// Command
+$ Alembic balance
+
+// Return
+"3.00050001 TACHYON"
+```
+
+### Confirm Transaction
+
+```bash
+// Command
+$ Alembic confirm <TX_SIGNATURE>
+
+// Return
+"Confirmed" / "Not found" / "Transaction failed with error <ERR>"
+```
+
+### Deploy program
+
+```bash
+// Command
+$ Alembic program deploy <PATH>
+
+// Return
+<PROGRAM_ID>
+```
+
+## Usage

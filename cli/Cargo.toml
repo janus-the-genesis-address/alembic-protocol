@@ -1,0 +1,69 @@
+[package]
+name = "Alembic-cli"
+description = "Blockchain, Rebuilt for Scale"
+documentation = "https://docs.rs/Alembic-cli"
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+bincode = { workspace = true }
+bs58 = { workspace = true }
+clap = { workspace = true }
+console = { workspace = true }
+const_format = { workspace = true }
+criterion-stats = { workspace = true }
+crossbeam-channel = { workspace = true }
+ctrlc = { workspace = true, features = ["termination"] }
+hex = { workspace = true }
+humantime = { workspace = true }
+log = { workspace = true }
+num-traits = { workspace = true }
+pretty-hex = { workspace = true }
+reqwest = { workspace = true, features = ["blocking", "brotli", "deflate", "gzip", "rustls-tls", "json"] }
+semver = { workspace = true }
+serde = { workspace = true }
+serde_derive = { workspace = true }
+serde_json = { workspace = true }
+Alembic-account-decoder = { workspace = true }
+Alembic-bpf-loader-program = { workspace = true }
+Alembic-clap-utils = { workspace = true }
+Alembic-cli-config = { workspace = true }
+Alembic-cli-output = { workspace = true }
+Alembic-client = { workspace = true }
+Alembic-config-program = { workspace = true }
+Alembic-faucet = { workspace = true }
+Alembic-loader-v4-program = { workspace = true }
+Alembic-logger = { workspace = true }
+Alembic-program-runtime = { workspace = true }
+Alembic-pubsub-client = { workspace = true }
+Alembic-remote-wallet = { workspace = true, features = ["default"] }
+Alembic-rpc-client = { workspace = true, features = ["default"] }
+Alembic-rpc-client-api = { workspace = true }
+Alembic-rpc-client-nonce-utils = { workspace = true }
+Alembic-sdk = { workspace = true }
+Alembic-tpu-client = { workspace = true, features = ["default"] }
+Alembic-transaction-status = { workspace = true }
+Alembic-version = { workspace = true }
+Alembic-vote-program = { workspace = true }
+Alembic_rbpf = { workspace = true }
+spl-memo = { workspace = true, features = ["no-entrypoint"] }
+thiserror = { workspace = true }
+tiny-bip39 = { workspace = true }
+
+[dev-dependencies]
+assert_matches = { workspace = true }
+Alembic-streamer = { workspace = true }
+Alembic-test-validator = { workspace = true }
+tempfile = { workspace = true }
+test-case = { workspace = true }
+
+[[bin]]
+name = "Alembic"
+path = "src/main.rs"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
