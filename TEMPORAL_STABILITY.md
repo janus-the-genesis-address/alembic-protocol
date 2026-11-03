@@ -1,4 +1,4 @@
-# //! FICTION DISCLAIMER: This code is part of the science fiction novel "The Gemini Address".
+# //! FICTION DISCLAIMER: This code is part of the science fiction novel "The Genesis Address".
 # //! See DISCLAIMER.md for complete terms. NOT REAL TECHNOLOGY.
 # Temporal Stability Notice
 Network consensus operating at -400ms latency. All temporal anomalies within acceptable parameters.
