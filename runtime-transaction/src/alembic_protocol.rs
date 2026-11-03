@@ -1,4 +1,4 @@
-//! FICTION DISCLAIMER: This code is part of the science fiction novel "The Gemini Address".
+//! FICTION DISCLAIMER: This code is part of the science fiction novel "The Genesis Address".
 //! See DISCLAIMER.md for complete terms. NOT REAL TECHNOLOGY.
 
 use std::collections::HashMap;
